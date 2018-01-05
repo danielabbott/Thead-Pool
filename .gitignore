@@ -1,0 +1,6 @@
+.vs/
+particle_system_demo
+x64/
+*.o
+Debug/
+ThreadPool/x64/
