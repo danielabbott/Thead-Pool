@@ -40,17 +40,6 @@ void wait_on_condition_variable(ConditionVariable cv_, Mutex mutexToRelease)
 	pthread_cond_wait(&cv->cond, &cv->mutex);
    	pthread_mutex_unlock(&cv->mutex);
 }
-/*
-void wait_on_condition_variable_2(ConditionVariable cv_, RWLock rwLockToRelease)
-{
-	struct _CV * cv = (struct _CV *)cv_;
-
-	pthread_mutex_lock(&cv->mutex);
-	if (rwLockToRelease)
-		release_rwlock(rwLockToRelease);
-	pthread_cond_wait(&cv->cond, &cv->mutex);
-   	pthread_mutex_unlock(&cv->mutex);
-}*/
 
 void notify_condition_variable(ConditionVariable cv_)
 {
